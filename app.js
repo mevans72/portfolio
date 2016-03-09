@@ -60,7 +60,7 @@ function question3 (){
   } else {
     alert('You should have given a Y or N answer, so you lose this round.');
   }
-  console.log('Users response to QUESTION THREE is: ' + answer3)
+  console.log('Users response to QUESTION THREE is: ' + answer3);
   console.log('User has answered ' + correctAnswers+ ' questions correctly.');
 }
 question3();
@@ -79,7 +79,7 @@ function question4 (){
   } else {
     alert('You should have given a Y or N answer, so you lose this round.');
   }
-  console.log('Users response to QUESTION FOUR is: ' + answer4)
+  console.log('Users response to QUESTION FOUR is: ' + answer4);
   console.log('User has answered ' + correctAnswers+ ' questions correctly.');
 }
 question4();
@@ -98,7 +98,7 @@ function question5 (){
   } else {
     alert('You should have given a Y or N answer, so you lose this round.');
   }
-  console.log('Users response to QUESTION FIVE is: ' + answer5)
+  console.log('Users response to QUESTION FIVE is: ' + answer5);
   console.log('User has answered ' + correctAnswers+ ' questions correctly.');
 }
 question5();
@@ -128,12 +128,12 @@ function question6 () {
       correct = true;
     } else if (typeof(answer6) === 'string' && answer6 !== '14') {
       //alert('Please make sure you enterd a numerical value.');
-      pTagSix.textContent = 'Please make sure you enterd a numerical value.'
+      pTagSix.textContent = 'Please make sure you enterd a numerical value.';
       console.log('Did we make it here?');
       correct = false;
     }
   }
-  console.log('Users response to QUESTION SIX is: ' + answer6)
+  console.log('Users response to QUESTION SIX is: ' + answer6);
   console.log('User has answered ' + correctAnswers + ' questions correctly.');
 }
 question6();
@@ -141,12 +141,12 @@ question6();
 var pTagSeven = document.getElementById('ans-seven');
 
 function question7 (){
-  var mikesCity = ['san diego', 'honolulu']
+  var mikesCity = ['san diego', 'honolulu'];
   var correct = false;
   console.log(mikesCity);
   while(correct === false) {
     var answer7 = prompt('Which is one of the two cities I would \"Mike\" like to live in?').toLowerCase();
-    console.log('The user guessed: ' + answer7)
+    console.log('The user guessed: ' + answer7);
     for(var i = 0; i < mikesCity.length; i++) {
       if(answer7 === mikesCity[i]) {
         //alert('Thats right! I definately wouldnt mind living in the beautiful city of Honolulu or San Diego!');
@@ -164,4 +164,4 @@ function question7 (){
 question7();
 
 //Thanks and See You Later
-alert('That completes our about Mike time! You got ' + correctAnswers + '/7 questions right. Thanks for getting to know me.')
+alert('That completes our about Mike time! You got ' + correctAnswers + '/7 questions right. Thanks for getting to know me.');

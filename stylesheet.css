@@ -18,10 +18,11 @@ body {
   border-bottom: .5em solid lightgrey;
   overflow: auto;
   background: transparent url(assets/white_transparent_background.jpeg);
+  padding-top: 1em;
 }
 .nav a {
   color: #424e06;
-  font-size: 14px;
+  font-size: 18px;
   font-weight: bold;
   padding: 14px 10px;
   text-transform: uppercase;
@@ -30,10 +31,10 @@ body {
   display: inline;
 }
 .nav .pull-left {
-  margin-left: 2em;
+  margin-left: 0em;
 }
 .nav .pull-right {
-  margin-right: 2em;
+  margin-right: 0em;
 }
 #profile_pic, #vacation_pic {
   height: 200px;
@@ -94,22 +95,23 @@ a:hover, a:focus, a:active {
   text-decoration: underline;
   color: #313b04;
 }
-
 #button, #buttonTwo {
-    display: inline-block;
-    height:20px;
-	width:70px;
-	background-color:##A6C510;
-	font-family:arial;
-	font-weight:bold;
-	color:#ffffff;
-	border-radius: 5px;
-	text-align:center;
-	margin-top:2px;
+  display: inline-block;
+  height: 20px;
+  width: 70px;
+  background-color: ##A6C510;
+  font-family: arial;
+  font-weight: bold;
+  color: #ffffff;
+  border-radius: 5px;
+  text-align: center;
+  margin-top: 2px;
 }
-
 form {
   display: inline-block;
   margin-left: 1em;
   margin-top: 0;
+}
+section {
+  margin-top: 3em;
 }

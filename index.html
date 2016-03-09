@@ -1,67 +1,79 @@
 <!DOCTYPE html>
 <html>
 
-<head>
-  <link href="http://s3.amazonaws.com/codecademy-content/courses/ltp/css/shift.css" rel="stylesheet">
-  <link rel="stylesheet" href="http://s3.amazonaws.com/codecademy-content/courses/ltp/css/bootstrap.css">
-  <link type="text/css" rel="stylesheet" href="stylesheet.css"/>
-  <script src="https://code.jquery.com/jquery-2.2.1.min.js"></script>
-  <title id="home">About Mike</title>
-</head>
+  <head>
+    <link href="http://s3.amazonaws.com/codecademy-content/courses/ltp/css/shift.css" rel="stylesheet">
+    <link rel="stylesheet" href="http://s3.amazonaws.com/codecademy-content/courses/ltp/css/bootstrap.css">
+    <link type="text/css" rel="stylesheet" href="stylesheet.css"/>
+    <script src="http://code.jquery.com/jquery-1.9.0.js"></script>
+    <title>About Mike</title>
+  </head>
 
-<body>
-  <div class="nav">
-    <div class="container">
-      <ul class="pull-left">
-        <li><a href="#home">Home</a></li>
-        <li><a href="#biography">Biography</a></li>
-        <li><a href="#experience">Experience</a></li>
-      </ul>
-      <ul class="pull-right">
-        <li><a href="#goals">Goals</a></li>
-        <li><a href="#travel">Travel</a></li>
-      </ul>
-    </div>
-  </div>
-  <div class="about">
-    <div cass="container">
-      <h1>What about Mike...</h1>
-    </div>
-  </div>
+  <body>
 
-  <h2 id="name">Name</h3>
+    <nav class="nav">
+      <div class="container">
+        <ol class="pull-left">
+          <li class="tab" data-content="home">
+            <a href="#home">Home</a>
+          </li>
+          <li class="tab" data-content="biography">
+            <a href="#biography">Biography</a>
+          </li>
+          <li class="tab" data-content="experience">
+            <a href="#experience">Experience</a>
+          </li>
+        </ol>
+        <ol class="pull-right">
+          <li class="tab" data-content="goals">
+            <a href="#goals">Goals</a>
+          </li>
+          <li class="tab" data-content="travel">
+            <a href="#travel">Travel</a>
+          </li>
+        </ol>
+      </div>
+    </nav>
+
+    <header id="home" class="home tab-content">
+        <h1>What about Mike...</h1>
+
+        <h2 >Name</h3>
         <p>Officialy I am known as Michale Navaro Evans, but my friends call me Mike. Feel free to take a look below to learn a little more about "Mike", and if you feel like having a little fun, feel free to try out the "<a href="guessing-game.html">How well do you know Mike guessing game</a>".</p>
-        <img id="profile_pic" src="assets/mike-profile.png"/>
-    <div class="biography">
-      <div cass="container">
-        <h3 id="biography">Biography</h3>
-          <p>I currently live in the great city of Seattle in Washingington state, but would also love to live in either Honolulu or San Diego. I have a background of over thirteen years as a leader in information security, and have a combination of experience in both business and technology, but the one major thing I am missing is a DEV background. This is crucial for me to learn for both to broaden my current career and as well as in pursuit of some of my personal goals and desires for start-ups.</p>
-      </div>
-    </div>
-    <div class="experience">
-      <div cass="container">
-        <h3 id="experience">Experience</h3>
-          <ul class="experiences">
-          <li>Security Engineering Manager, Pacific Northwest Region @<a href="http://www.checkpoint.com/" title="Check Point Systems">Check Point Systems</a></li>
-          <li>Regional Security Consulting Manager @<a href="http://www.cisco.com/go/security/" title="Cisco Security Solutions">Cisco Security Solutions</a></li>
-          <li>Information Security Engineering @<a title="Mike"s Other Gigs">Alaska Airlines, Starbucks, USAF and others </a></li>
-          </ul>
-        </div>
-      </div>
-      <div class="goals">
-        <div cass="container">
-        <h3 id="goals">Goals</h3>
-          <ul>
-              <li>GOAL #1: Complete the Code Fellows 201 course and get up to speed with HTML, CSS, and JavaScript</li>
-              <li>GOAL #2: Complete the Code Fellows 301 course and master the Model View Controller (MVC) design architecture</li>
-              <li>GOAL #3: Complete the Code Fellows 401 Python track and become a Python guru with a passion for automation and orchastration through code and APIs</li>
-          </ul>
-      </div>
-      </div>
-      <div class="travel">
-        <div cass="container">
-        <h3 id="travel">Travel</h3>
-        <p>Places I"ve Visited</p>
+        <img id="profile_pic" src="http://michaleevans.com/assets/images/myproflpic.png"/>
+    </header>
+
+    <section id="biography" class="biography tab-content">
+        <h3>Biography</h3>
+        <p>I currently live in the great city of Seattle in Washingington state, but would also love to live in either Honolulu or San Diego. I have a background of over thirteen years as a leader in information security, and have a combination of experience
+          in both business and technology, but the one major thing I am missing is a DEV background. This is crucial for me to learn for both to broaden my current career and as well as in pursuit of some of my personal goals and desires for start-ups.</p>
+    </section>
+
+    <section id="experience" class="experience tab-content">
+        <h3>Experience</h3>
+        <ul class="experiences">
+          <li>Security Engineering Manager, Pacific Northwest Region @<a href="http://www.checkpoint.com/" title="Check Point Systems">Check Point Systems</a>
+          </li>
+          <li>Regional Security Consulting Manager @<a href="http://www.cisco.com/go/security/" title="Cisco Security Solutions">Cisco Security Solutions</a>
+          </li>
+          <li>Information Security Engineering @<a title="Mike's Other Gigs">Alaska Airlines, Starbucks, USAF and others
+            </a>
+          </li>
+        </ul>
+    </section>
+
+    <section id="goals" class="goals tab-content">
+        <h3>Goals</h3>
+        <ul>
+          <li>GOAL #1: Complete the Code Fellows 201 course and get up to speed with HTML, CSS, and JavaScript</li>
+          <li>GOAL #2: Complete the Code Fellows 301 course and master the Model View Controller (MVC) design architecture</li>
+          <li>GOAL #3: Complete the Code Fellows 401 Python track and become a Python guru with a passion for automation and orchastration through code and APIs</li>
+        </ul>
+    </section>
+
+    <section id="travel" class="travel tab-content">
+        <h3>Travel</h3>
+        <p>Places I've Visited</p>
         <form name="visitedListForm">
           <div id="button">Update:</div>
           <input type="text" name="visitedListItem"/>
@@ -74,7 +86,6 @@
           <li>Santorini</li>
           <li>Belgrade</li>
         </ol>
-
         <p id="moveme_down">Places on My List</p>
         <form name="toVisitListForm">
           <div id="buttonTwo">Update:</div>
@@ -82,20 +93,24 @@
         </form>
         <br/>
         <ol class="toVisitList">
-            <li>Rome</li>
-            <li>Split</li>
-            <li>Costa Rica</li>
-            <li>Majorca</li>
-            <li>Zakynthos</li>
+          <li>Rome</li>
+          <li>Split</li>
+          <li>Costa Rica</li>
+          <li>Majorca</li>
+          <li>Zakynthos</li>
         </ol>
         <img id="vacation_pic" src="assets/bora-bora-1.jpg"/>
         <img id="vacation_pic" src="assets/bora-bora-2.jpg"/>
         <img id="vacation_pic" src="assets/france-1.jpg"/>
         <img id="vacation_pic" src="assets/vacation.jpg"/>
-        </div>
-      </div>
+    </section>
+
+    <footer>
       <script src="data.js"></script>
       <script src="about-me.js"></script>
-      <!--<script src="app.js"></script>-->
+      <script src="about-me-view.js"></script>
+      <!-- <script src="app.js"></script> -->
+    </footer>
+
   </body>
 </html>

@@ -95,26 +95,23 @@ a:hover, a:focus, a:active {
   text-decoration: underline;
   color: #313b04;
 }
-
 #button, #buttonTwo {
-    display: inline-block;
-    height:20px;
-	width:70px;
-	background-color:##A6C510;
-	font-family:arial;
-	font-weight:bold;
-	color:#ffffff;
-	border-radius: 5px;
-	text-align:center;
-	margin-top:2px;
+  display: inline-block;
+  height: 20px;
+  width: 70px;
+  background-color: ##A6C510;
+  font-family: arial;
+  font-weight: bold;
+  color: #ffffff;
+  border-radius: 5px;
+  text-align: center;
+  margin-top: 2px;
 }
-
 form {
   display: inline-block;
   margin-left: 1em;
   margin-top: 0;
 }
-
 section {
   margin-top: 3em;
 }

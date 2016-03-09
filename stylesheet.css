@@ -123,15 +123,16 @@ footer {
   width: 100%;
   height: 4em;
   margin-top: 2em;
-  /*background-color: white;*/
-  /*border-top: .1em solid lightgrey;*/
-  /*border-bottom: .1em solid lightgrey;*/
   overflow: auto;
-  /*background: transparent url(assets/white_transparent_background.jpeg);*/
   padding-top: 0em;
   padding-bottom: 2em;
   position: absolute;;
   text-align: center;
+  /*background-color: white;*/
+  /*background: transparent url(assets/white_transparent_background.jpeg);*/
+  /*border-top: .1em solid lightgrey;*/
+  /*border-bottom: .1em solid lightgrey;*/
+
 
 }
 footer a {

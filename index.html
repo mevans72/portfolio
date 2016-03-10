@@ -2,9 +2,11 @@
 <html>
 
   <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <link href="http://s3.amazonaws.com/codecademy-content/courses/ltp/css/shift.css" rel="stylesheet">
     <link rel="stylesheet" href="http://s3.amazonaws.com/codecademy-content/courses/ltp/css/bootstrap.css">
-    <link type="text/css" rel="stylesheet" href="stylesheet.css"/>
+    <link type="text/css" rel="stylesheet" href="assets/styles/stylesheet.css"/>
+    <link type="text/css" rel="stylesheet" href="assets/styles/icons.css"/>
     <script src="http://code.jquery.com/jquery-1.9.0.js"></script>
     <title>About Mike</title>
   </head>
@@ -12,12 +14,11 @@
   <body>
 
     <nav class="nav">
-        <ol class="pull-left">
+      <p class="icon-menu" data-content="menu"><a href="#"></a></p>
+        <ol>
           <li class="tab" data-content="home"><a href="#home">Home</a></li>
           <li class="tab" data-content="biography"><a href="#biography">Biography</a></li>
           <li class="tab" data-content="experience"><a href="#experience">Experience</a></li>
-        </ol>
-        <ol class="pull-right">
           <li class="tab" data-content="goals"><a href="#goals">Goals</a></li>
           <li class="tab" data-content="travel"><a href="#travel">Travel</a></li>
         </ol>
@@ -28,7 +29,7 @@
 
         <h2 >Name</h3>
         <p>Officialy I am known as Michale Navaro Evans, but my friends call me Mike. Feel free to take a look below to learn a little more about "Mike", and if you feel like having a little fun, feel free to try out the "<a href="guessing-game.html">How well do you know Mike guessing game</a>".</p>
-        <img id="profile_pic" src="http://michaleevans.com/assets/images/myproflpic.png"/>
+        <img id="profile_pic" src="assets/images/mike-profile.png"/>
     </header>
 
     <section id="biography" class="biography tab-content">
@@ -87,23 +88,23 @@
           <li>Majorca</li>
           <li>Zakynthos</li>
         </ol>
-        <img id="vacation_pic" src="assets/bora-bora-1.jpg"/>
-        <img id="vacation_pic" src="assets/bora-bora-2.jpg"/>
-        <img id="vacation_pic" src="assets/france-1.jpg"/>
-        <img id="vacation_pic" src="assets/vacation.jpg"/>
+        <img id="vacation_pic" src="assets/images/bora-bora-1.jpg"/>
+        <img id="vacation_pic" src="assets/images/bora-bora-2.jpg"/>
+        <img id="vacation_pic" src="assets/images/france-1.jpg"/>
+        <img id="vacation_pic" src="assets/images/vacation.jpg"/>
     </section>
 
     <footer>
       <ol id="social" class="social pull-left">
-        <li><a href="http://linkedin.michaleevans.com">LinkedIn</a></li>
-        <li><a href="https://twitter.com/michaleevans72">Twitter</a></li>
-        <li><a href="https://github.com/mevans72">GitHub</a></li>
+        <!-- <li><a href="http://linkedin.michaleevans.com">LinkedIn</a></li> -->
+        <li><a href="https://twitter.com/michaleevans72" class="icon-twitter3" > Twitter</a></li>
+        <li><a href="https://github.com/mevans72" class="icon-github"> GitHub</a></li>
       </ol>
 
-      <script src="data.js"></script>
-      <script src="about-me.js"></script>
-      <script src="about-me-view.js"></script>
-      <!-- <script src="app.js"></script> -->
+      <script src="assets/scripts/data.js"></script>
+      <script src="assets/scripts/about-me.js"></script>
+      <script src="assets/scripts/about-me-view.js"></script>
+      <!-- <script src="assets/scripts/app.js"></script> -->
     </footer>
 
   </body>

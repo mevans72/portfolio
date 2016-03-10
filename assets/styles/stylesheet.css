@@ -16,9 +16,9 @@ img {
 .nav {
   top: 0;
   left: 0;
-  position: fixed;
+  position: relative;;
   width: 100%;
-  height: 4em;
+  height: 12em;
   background-color: white;
   border-bottom: .5em solid lightgrey;
   overflow: auto;
@@ -44,10 +44,10 @@ nav ol {
 }
 
 nav li {
-  display: inline;
+  display: block;
   margin: 0 0 0 0;
   width: 10%;
-  visibility: hidden;
+  /*visibility: hidden;*/
 
 }
 #profile_pic, #vacation_pic {
@@ -178,11 +178,14 @@ footer li {
    .icon-menu {
      visibility: hidden;
    }
-   nav ul  {
-     display: block;
-   }
+   /*nav ul  {
+     display: inline;;
+   }*/
    nav li {
      display: inline;
      visibility: visible;
+   }
+   .nav {
+     height: 4em;
    }
 }

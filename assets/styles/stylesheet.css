@@ -4,7 +4,7 @@
   font-family: Frutiger, Avenir, Arial;
 }
 body {
-  background-color: grey;
+  background-color: white;
   margin: 0;
   padding-top: 0;
 }
@@ -71,33 +71,27 @@ nav li {
   margin-bottom: 4em;
 }
 h1, h2, h3 {
-  color: #a6c510;
-  font-family: Frutiger, Avenir, Arial;
+  /*color: #a6c510;*/
   margin: 1em 0 .5em 1em;
 }
-h2, h3 {
+h1, h2, h3 {
   text-transform: uppercase;
 }
-h1, form, #button, #buttonTwo {
+form, #button, #buttonTwo {
   margin: 2em .5em .5em 1em;
-}
-.about {
-  border-top: .5em solid lightgrey;
-  border-bottom: .5em solid lightgrey;
-  background-color: white;
 }
 li {
   color: #000000;
 }
-p, ol, .goals li, .experience li {
+p, ol, .goals li, .experience li, h4 {
   color: #000000;
   margin: 0em 0em 0em 2em;
 }
+h4 {
+  margin-bottom: .5em;
+}
 ol {
   list-style-type: none;
-}
-#moveme_down {
-  margin-top: 20px;
 }
 a:link, a:visited, a {
   text-decoration: none;
@@ -113,10 +107,10 @@ a:hover, a:focus, a:active {
   display: inline-block;
   height: 20px;
   width: 70px;
-  background-color: ##A6C510;
+  /*background-color: ##A6C510;*/
   font-family: arial;
   font-weight: bold;
-  color: #ffffff;
+  color: black;
   border-radius: 5px;
   text-align: center;
   margin-top: 2px;
@@ -155,7 +149,6 @@ footer a {
 }
 footer li {
   display: inline-flex;
-
 }
 
 .social {

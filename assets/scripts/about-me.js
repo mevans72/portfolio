@@ -6,7 +6,7 @@ function Mike (opts) {
   this.goals = opts.goals;
 }
 
-//Adding functionality for a couple form  features to add things to the travel section(s)
+//Adding functionality for a couple form  features to add things to the life section(s)
 $(document).ready(function() {
   $('#button').click(function() {
     var toAdd = $('input[name=visitedListItem]').val();

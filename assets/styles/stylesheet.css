@@ -17,7 +17,8 @@ body {
   background-color: white;
   border-bottom: .5em solid lightgrey;
   overflow: auto;
-  background: transparent url(assets/white_transparent_background.jpeg);
+  /*background: transparent url(../../assets/images/white_transparent_background.jpeg);*/
+  background: transparent url(/Users/Mike/CF/301/portfolio/assets/images/white_transparent_background.jpeg);
   padding-top: 1em;
 }
 .nav a {
@@ -129,7 +130,7 @@ footer {
   position: absolute;;
   text-align: center;
   /*background-color: white;*/
-  /*background: transparent url(assets/white_transparent_background.jpeg);*/
+  /*background: transparent url(assets/images/white_transparent_background.jpeg);*/
   /*border-top: .1em solid lightgrey;*/
   /*border-bottom: .1em solid lightgrey;*/
 

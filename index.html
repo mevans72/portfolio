@@ -2,108 +2,161 @@
 <html>
 
   <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
     <link href="http://s3.amazonaws.com/codecademy-content/courses/ltp/css/shift.css" rel="stylesheet">
     <link rel="stylesheet" href="http://s3.amazonaws.com/codecademy-content/courses/ltp/css/bootstrap.css">
-    <link type="text/css" rel="stylesheet" href="stylesheet.css"/>
     <script src="http://code.jquery.com/jquery-1.9.0.js"></script>
+
+    <link type="text/css" rel="stylesheet" href="assets/styles/stylesheet.css"/>
+    <link type="text/css" rel="stylesheet" href="assets/styles/icons.css"/>
     <title>About Mike</title>
   </head>
 
   <body>
 
     <nav class="nav">
-        <ol class="pull-left">
-          <li class="tab" data-content="home"><a href="#home">Home</a></li>
-          <li class="tab" data-content="biography"><a href="#biography">Biography</a></li>
-          <li class="tab" data-content="experience"><a href="#experience">Experience</a></li>
-        </ol>
-        <ol class="pull-right">
-          <li class="tab" data-content="goals"><a href="#goals">Goals</a></li>
-          <li class="tab" data-content="travel"><a href="#travel">Travel</a></li>
-        </ol>
+      <p class="icon-menu" data-content="menu">
+        <a href="#">menu</a>
+      </p>
+      <ol>
+        <li class="tab" data-content="home">
+          <a href="#home">home</a>
+        </li>
+        <li class="tab" data-content="about">
+          <a href="#about">about</a>
+        </li>
+        <li class="tab" data-content="life">
+          <a href="#life">life</a>
+        </li>
+        <li class="tab" data-content="projects">
+          <a href="#projects">projects</a>
+        </li>
+      </ol>
     </nav>
 
     <header id="home" class="home tab-content">
-        <h1>What about Mike...</h1>
-
-        <h2 >Name</h3>
-        <p>Officialy I am known as Michale Navaro Evans, but my friends call me Mike. Feel free to take a look below to learn a little more about "Mike", and if you feel like having a little fun, feel free to try out the "<a href="guessing-game.html">How well do you know Mike guessing game</a>".</p>
-        <img id="profile_pic" src="http://michaleevans.com/assets/images/myproflpic.png"/>
+      <h1>What about Mike...</h1>
+      <img id="profile_pic" src="assets/images/mike-profile.png"/>
     </header>
 
-    <section id="biography" class="biography tab-content">
-        <h3>Biography</h3>
-        <p>I currently live in the great city of Seattle in Washingington state, but would also love to live in either Honolulu or San Diego. I have a background of over thirteen years as a leader in information security, and have a combination of experience
-          in both business and technology, but the one major thing I am missing is a DEV background. This is crucial for me to learn for both to broaden my current career and as well as in pursuit of some of my personal goals and desires for start-ups.</p>
-    </section>
+    <section id="about" class="about tab-content">
+      <h3>ABOUT</h3>
+      <p>Officialy I am known as
+        <strong>Michale Navaro Evans</strong>, but my friends call me
+        <strong>Mike</strong>. Feel free to take a look below to learn a little more about "Mike", and if you feel like having a little fun, feel free to try out the "<a href="guessing-game.html">How well do you know Mike guessing game</a>".</p>
+      <p>I currently live in the great city of Seattle in Washingington state, but would also love to live in either Honolulu or San Diego. I have a background of over thirteen years as a leader in information security, and have a combination of experience
+        in both business and technology, but the one major thing I am missing is a DEV background. This is crucial for me to learn for both to broaden my current career and as well as in pursuit of some of my personal goals and desires for start-ups.</p>
 
-    <section id="experience" class="experience tab-content">
-        <h3>Experience</h3>
-        <ul class="experiences">
-          <li>Security Engineering Manager, Pacific Northwest Region @<a href="http://www.checkpoint.com/" title="Check Point Systems">Check Point Systems</a>
+      <!-- <h3>experience</h3>
+      <ul class="experiences"> -->
+      <h3>experience</h3>
+      <ul class="experiences">
+        <!-- <div id="experience"></div> -->
+        <script id="experience-template" type="text/x-handlebars-template">
+          <li>{{role}}
+            <a href="{{experience_url}}" title="{{company}}">{{company}}</a>
           </li>
-          <li>Regional Security Consulting Manager @<a href="http://www.cisco.com/go/security/" title="Cisco Security Solutions">Cisco Security Solutions</a>
-          </li>
-          <li>Information Security Engineering @<a title="Mike's Other Gigs">Alaska Airlines, Starbucks, USAF and others
-            </a>
-          </li>
-        </ul>
-    </section>
+        </script>
+      </ul>
 
-    <section id="goals" class="goals tab-content">
-        <h3>Goals</h3>
-        <ul>
-          <li>GOAL #1: Complete the Code Fellows 201 course and get up to speed with HTML, CSS, and JavaScript</li>
+      <!-- <h3>EXPERIENCE</h3>
+          <ul class="experiences">
+            <li>Security Engineering Manager, Pacific Northwest Region @<a href="http://www.checkpoint.com/" title="Check Point Systems">Check Point Systems</a>
+            </li> -->
+      <!-- <ul>
+            <li>Regional Security Consulting Manager @<a href="http://www.cisco.com/go/security/" title="Cisco Security Solutions">Cisco Security Solutions</a>
+            </li>
+            <li>Information Security Engineering @<a title="Mike's Other Gigs">Alaska Airlines, Starbucks, USAF and others
+              </a>
+            </li>
+          </ul> -->
+      <h3>goals</h3>
+      <ul class="goals">
+        <!-- <div id="goals"></div> -->
+        <script id="goals-template" type="text/x-handlebars-template">
+          <li>{{goal}}</li>
+        </script>
+      </ul>
+      <!-- <li>GOAL #1: Complete the Code Fellows 201 course and get up to speed with HTML, CSS, and JavaScript</li>
           <li>GOAL #2: Complete the Code Fellows 301 course and master the Model View Controller (MVC) design architecture</li>
           <li>GOAL #3: Complete the Code Fellows 401 Python track and become a Python guru with a passion for automation and orchastration through code and APIs</li>
-        </ul>
+        </ul> -->
+    </section>
+    <section id="life" class="life tab-content">
+      <h3>life</h3>
+      <h4>Places I've Visited</h4>
+      <form name="visitedListForm">
+        <div id="button">Update:</div>
+        <input type="text" name="visitedListItem"/>
+      </form>
+      <br/>
+      <ol class="visitedList">
+        <li>Bora Bora</li>
+        <li>Nice</li>
+        <li>Playa Del Carmen</li>
+        <li>Santorini</li>
+        <li>Belgrade</li>
+      </ol>
+      <h4>Places on My List</h4>
+      <form name="toVisitListForm">
+        <div id="buttonTwo">Update:</div>
+        <input type="text" name="toVisitListItem"/>
+      </form>
+      <br/>
+      <ol class="toVisitList">
+        <li>Rome</li>
+        <li>Split</li>
+        <li>Costa Rica</li>
+        <li>Majorca</li>
+        <li>Zakynthos</li>
+      </ol>
+      <img id="vacation_pic" src="assets/images/bora-bora-1.jpg"/>
+      <img id="vacation_pic" src="assets/images/bora-bora-2.jpg"/>
+      <img id="vacation_pic" src="assets/images/france-1.jpg"/>
+      <img id="vacation_pic" src="assets/images/vacation.jpg"/>
     </section>
 
-    <section id="travel" class="travel tab-content">
-        <h3>Travel</h3>
-        <p>Places I've Visited</p>
-        <form name="visitedListForm">
-          <div id="button">Update:</div>
-          <input type="text" name="visitedListItem"/>
-        </form>
-        <br/>
-        <ol class="visitedList">
-          <li>Bora Bora</li>
-          <li>Nice</li>
-          <li>Playa Del Carmen</li>
-          <li>Santorini</li>
-          <li>Belgrade</li>
-        </ol>
-        <p id="moveme_down">Places on My List</p>
-        <form name="toVisitListForm">
-          <div id="buttonTwo">Update:</div>
-          <input type="text" name="toVisitListItem"/>
-        </form>
-        <br/>
-        <ol class="toVisitList">
-          <li>Rome</li>
-          <li>Split</li>
-          <li>Costa Rica</li>
-          <li>Majorca</li>
-          <li>Zakynthos</li>
-        </ol>
-        <img id="vacation_pic" src="assets/bora-bora-1.jpg"/>
-        <img id="vacation_pic" src="assets/bora-bora-2.jpg"/>
-        <img id="vacation_pic" src="assets/france-1.jpg"/>
-        <img id="vacation_pic" src="assets/vacation.jpg"/>
+    <section id="projects" class="projects tab-content">
+      <h3>code felloes projects</h3>
+      <div id="slideshow">
+        <div>
+          <img class="slideshow" src="assets/images/project-1-1.png">
+        </div>
+        <div>
+          <img class="slideshow" src="assets/images/project-1-2.png">
+        </div>
+        <div>
+          <img class="slideshow" src="assets/images/project-2-1.png">
+        </div>
+        <div>
+          <img class="slideshow" src="assets/images/project-2-2.png">
+        </div>
+        <div>
+          <img class="slideshow" src="assets/images/project-3-1.png">
+        </div>
+      </div>
     </section>
 
     <footer>
       <ol id="social" class="social pull-left">
-        <li><a href="http://linkedin.michaleevans.com">LinkedIn</a></li>
-        <li><a href="https://twitter.com/michaleevans72">Twitter</a></li>
-        <li><a href="https://github.com/mevans72">GitHub</a></li>
+        <!-- <li><a href="http://linkedin.michaleevans.com">LinkedIn</a></li> -->
+        <li>
+          <a href="https://twitter.com/michaleevans72" class="icon-twitter3">
+            Twitter</a>
+        </li>
+        <li>
+          <a href="https://github.com/mevans72" class="icon-github">
+            GitHub</a>
+        </li>
       </ol>
 
-      <script src="data.js"></script>
-      <script src="about-me.js"></script>
-      <script src="about-me-view.js"></script>
-      <!-- <script src="app.js"></script> -->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.4/handlebars.js"></script>
+      <script src="assets/vendor/scripts/slide-show.js"></script>
+
+      <script src="assets/scripts/data.js"></script>
+      <script src="assets/scripts/about-me.js"></script>
+      <script src="assets/scripts/about-me-view.js"></script>
     </footer>
 
   </body>

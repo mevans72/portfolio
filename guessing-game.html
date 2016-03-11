@@ -2,19 +2,25 @@
 <html>
 
   <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <link href="http://s3.amazonaws.com/codecademy-content/courses/ltp/css/shift.css" rel="stylesheet">
     <link rel="stylesheet" href="http://s3.amazonaws.com/codecademy-content/courses/ltp/css/bootstrap.css">
-    <link type="text/css" rel="stylesheet" href="stylesheet.css"/>
+    <link type="text/css" rel="stylesheet" href="assets/styles/stylesheet.css"/>
+    <link type="text/css" rel="stylesheet" href="assets/styles/icons.css"/>
+    <script src="http://code.jquery.com/jquery-1.9.0.js"></script>
     <title>Guessing Game</title>
   </head>
 
   <body>
     <nav class="nav">
-      <ul class="pull-left">
-        <li>
-          <a href="index.html">Home</a>
+      <p class="icon-menu" data-content="menu">
+        <a href="#"></a>
+      </p>
+      <ol>
+        <li class="tab" data-content="home">
+          <a href="index.html">HOME</a>
         </li>
-      </ul>
+      </ol>
     </nav>
 
     <section>
@@ -44,7 +50,19 @@
     </section>
 
     <footer>
-      <script src="app.js"></script>
+      <ol id="social" class="social pull-left">
+        <!-- <li><a href="http://linkedin.michaleevans.com">LinkedIn</a></li> -->
+        <li>
+          <a href="https://twitter.com/michaleevans72" class="icon-twitter3">
+            Twitter</a>
+        </li>
+        <li>
+          <a href="https://github.com/mevans72" class="icon-github">
+            GitHub</a>
+        </li>
+      </ol>
+
+      <script src="assets/scripts/about-me-game.js"></script>
     </footer>
 
   </body>

@@ -23,11 +23,11 @@ img {
   border-bottom: .5em solid lightgrey;
   overflow: auto;
   /*background: transparent url(../../assets/images/white_transparent_background.jpeg);*/
-  background: transparent url(/Users/Mike/CF/301/portfolio/assets/images/white_transparent_background.jpeg);
+  /*background: transparent url(/Users/Mike/CF/301/portfolio/assets/images/white_transparent_background.jpeg);*/
   padding-top: 1em;
 }
 .nav a {
-  color: #424e06;
+  /*color: #424e06;*/
   font-size: 18px;
   font-weight: bold;
   padding: 14px 10px;
@@ -95,13 +95,13 @@ ol {
 }
 a:link, a:visited, a {
   text-decoration: none;
-  color: #424e06;
+  /*color: #424e06;*/
 }
 a:hover, a:focus, a:active {
   font-weight: bold;
   font-style: none;
   text-decoration: underline;
-  color: #313b04;
+  /*color: #313b04;*/
 }
 #button, #buttonTwo {
   display: inline-block;
@@ -141,7 +141,7 @@ footer {
   /*border-bottom: .1em solid lightgrey;*/
 }
 footer a {
-  color: #424e06;
+  /*color: #424e06;*/
   font-size: 18px;
   font-weight: bold;
   padding: 14px 10px;

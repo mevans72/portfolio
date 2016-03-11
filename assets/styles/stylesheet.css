@@ -63,12 +63,23 @@ nav li {
   border-radius: 15px;
   box-shadow: 15px 30px 40px 15px;
 }
-#profile_pic:hover, #vacation_pic:hover {
+#vacation_pic:hover {
   width: 225px;
   height: 225px;
 }
 #vacation_pic {
+  height: 200px;
+  width: 200px;
   margin-bottom: 4em;
+}
+#profile_pic {
+  height: 400px;
+  width: 300px;
+}
+
+#profile_pic:hover {
+  height: 375px;
+  width: 275px;  
 }
 h1, h2, h3 {
   /*color: #a6c510;*/

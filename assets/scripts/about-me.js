@@ -6,7 +6,7 @@ function Mike (opts) {
   this.goals = opts.goals;
 }
 
-//Adding functionality for a couple form  features to add things to the life section(s)
+//Adding functionality for a couple form  features to add things to the various section(s)
 $(document).ready(function() {
   $('#button').click(function() {
     var toAdd = $('input[name=visitedListItem]').val();
@@ -26,21 +26,6 @@ $(document).ready(function() {
     $(this).remove();
   });
 });
-
-
-//Class code below
-// Mike.prototype.toHtml = function() {
-//   var $newMike = $('experience.template').clone();
-//
-//   $newMike.attr('data-category', this.category);
-//
-//   $newMike.find('li').append($('<li>' + this.experience + '</li>'));
-//   $newMike.find('.experiences').html(this.experience);
-//
-//   $newMike.removeClass('template');
-//
-//   return $newMike;
-// };
 
 Mike.prototype.toHtml = function() {
   var $newMike = $('ul').html();

@@ -1,4 +1,4 @@
-// JS file for Feb 9 class demo
+// JS file for Feb 9 Code 201 Class demo
 
 //Introductions
 var userName = prompt('What is your name?');

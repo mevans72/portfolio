@@ -1,7 +1,5 @@
 var experienceData = [
   {
-    // title: 'experience',
-    // title_cass: 'experience',
     role: 'Security Engineering Manager, Pacific Northwest Region @',
     role_url: 'http://www.checkpoint.com/',
     company: 'Check Point Systems'

@@ -8,10 +8,14 @@
     <link rel="stylesheet" href="http://s3.amazonaws.com/codecademy-content/courses/ltp/css/bootstrap.css">
     <script src="http://code.jquery.com/jquery-1.9.0.js"></script>
 
+    <link type="text/css" rel="stylesheet" href="assets/styles/base.css"/>
+    <link type="text/css" rel="stylesheet" href="assets/styles/layout.css"/>
+    <link type="text/css" rel="stylesheet" href="assets/styles/module.css"/>
+    <link type="text/css" rel="stylesheet" href="assets/styles/state.css"/>
     <link type="text/css" rel="stylesheet" href="assets/styles/stylesheet.css"/>
     <link type="text/css" rel="stylesheet" href="assets/styles/icons.css"/>
 
-  <script id="experience-template" type="text/x-handlebars-template">
+    <script id="experience-template" type="text/x-handlebars-template">
     <li>{{role}}
       <a href="{{experience_url}}" title="{{company}}">{{company}}</a>
     </li>
@@ -22,7 +26,7 @@
   </script>
 
   <script id="projects-template" type="text/x-handlebars-template">
-<h4>{{projectName}}</h4>
+    <h4>{{projectName}}</h4>
     <ul>
       <li>{{projectDescription}}</li>
     </ul>
@@ -34,9 +38,11 @@
 <body>
 
   <nav class="nav">
-    <p class="icon-menu" data-content="menu">
-      <a href="#">menu</a>
-    </p>
+    <ul>
+    <li class="icon-menu" data-content="menu">
+      <a class="menu" href="#">menu</a>
+    </li>
+  </ul>
     <ol>
       <li class="tab" data-content="home">
         <a href="#home">home</a>
@@ -55,7 +61,7 @@
 
   <header id="home" class="home tab-content">
     <h1>What about Mike...</h1>
-    <img id="profile_pic" src="assets/images/mike-profile.png"/>
+    <img class="profile_pic" src="assets/images/mike-profile.png"/>
   </header>
 
   <section id="about" class="about tab-content">
@@ -88,10 +94,12 @@
       <li>Majorca</li>
       <li>Zakynthos</li>
     </ol>
+    <div>
     <img id="vacation_pic" src="assets/images/bora-bora-1.jpg"/>
     <img id="vacation_pic" src="assets/images/bora-bora-2.jpg"/>
     <img id="vacation_pic" src="assets/images/france-1.jpg"/>
     <img id="vacation_pic" src="assets/images/vacation.jpg"/>
+  </div>
   </section>
 
   <section id="projects" class="projects tab-content">
@@ -114,7 +122,7 @@
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.4/handlebars.js"></script>
 
-    <script src="assets/scripts/data.js"></script>
+    <script src="assets/scripts/about-me-data.js"></script>
     <script src="assets/scripts/about-me.js"></script>
     <script src="assets/scripts/about-me-view.js"></script>
   </footer>

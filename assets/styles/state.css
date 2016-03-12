@@ -1,0 +1,57 @@
+/*Misc link, hover, focus and active states*/
+a:link, a:visited, a {
+  text-decoration: none;
+}
+a:hover, a:focus, a:active {
+  font-weight: bold;
+  font-style: none;
+  text-decoration: underline;
+}
+body > nav > ul > li:active, body > nav > ul > li:focus, body > nav > ul > li:hover {
+  font-weight: bold;
+  font-style: none;
+  color: #2A6496
+}
+body > nav > ul > li > a:hover, body > nav > ul > li > a:focus, body > nav > ul > li > a:active {
+  font-weight: bold;
+  font-style: none;
+  text-decoration: none;
+}
+/*Image states*/
+.profile_pic, .life img {
+  -webkit-transition: all 1s ease;
+  -moz-transition: all 1s ease;
+  -o-transition: all 1s ease;
+  -ms-transition: all 1s ease;
+  transition: all 1s ease;
+}
+.life img:hover {
+  width: 225px;
+  height: 225px;
+}
+.profile_pic:hover {
+  height: 375px;
+  width: 275px;
+}
+/*Media queries*/
+@media screen and (min-width: 480px) {
+   .icon-menu {
+     visibility: hidden;
+   }
+   nav {
+     height: 4em;
+   }
+   nav ol {
+     position: absolute;
+     left: 2em;
+     top: 1em;
+     margin-left: 0;
+     padding-left: 0;
+   }
+   nav li {
+     display: inline;
+   }
+   /*nav ul {
+     left: 0em;
+   }*/
+}

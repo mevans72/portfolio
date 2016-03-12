@@ -102,7 +102,7 @@ p, ol, .goals li, .experiences li, h4 {
 h4 {
   margin-bottom: .5em;
 }
-ol {
+ol, #projects > ul > li {
   list-style-type: none;
 }
 a:link, a:visited, a {
@@ -192,7 +192,7 @@ footer li {
    }*/
    nav li {
      display: inline;
-     visibility: visible;
+     /*visibility: visible;*/
    }
    .nav {
      height: 4em;

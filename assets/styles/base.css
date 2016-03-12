@@ -1,0 +1,17 @@
+* {
+  font-family: Frutiger, Avenir, Arial;
+}
+body {
+  background-color: white;
+  margin: 0;
+  padding-top: 0;
+}
+img {
+  max-width: 100%;
+}
+header, section {
+  margin-top: 0 !important;
+}
+/*.about  {
+  margin-top: 0em;
+}*/

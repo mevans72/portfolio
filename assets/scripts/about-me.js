@@ -50,5 +50,5 @@ projectsData.forEach(function(obj) {
   projectsArray.push(new Projects(obj));
 });
 projectsArray.forEach(function(obj){
-  $('.projects').append(obj.toHtml());
+  $('.test').append(obj.toHtml());
 });

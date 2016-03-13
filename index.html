@@ -2,47 +2,44 @@
 <html>
 
   <head>
+    <title>About Mike</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-
+    <!-- External / Vendor CSS Files -->
     <link href="http://s3.amazonaws.com/codecademy-content/courses/ltp/css/shift.css" rel="stylesheet">
     <link rel="stylesheet" href="http://s3.amazonaws.com/codecademy-content/courses/ltp/css/bootstrap.css">
-    <script src="http://code.jquery.com/jquery-1.9.0.js"></script>
-
+    <link type="text/css" rel="stylesheet" href="assets/vendor/styles/project-slide-show.css"/>
+    <!-- Local CSS Files -->
     <link type="text/css" rel="stylesheet" href="assets/styles/base.css"/>
     <link type="text/css" rel="stylesheet" href="assets/styles/layout.css"/>
     <link type="text/css" rel="stylesheet" href="assets/styles/module.css"/>
     <link type="text/css" rel="stylesheet" href="assets/styles/state.css"/>
-    <link type="text/css" rel="stylesheet" href="assets/styles/stylesheet.css"/>
     <link type="text/css" rel="stylesheet" href="assets/styles/icons.css"/>
-
+    <!-- Handlebar Template #1 -->
     <script id="experience-template" type="text/x-handlebars-template">
     <li>{{role}}
       <a href="{{experience_url}}" title="{{company}}">{{company}}</a>
     </li>
   </script>
-
+  <!-- Handlebar Template #2 -->
   <script id="goals-template" type="text/x-handlebars-template">
     <li>{{goal}}</li>
   </script>
-
+  <!-- Handlebar Template #3 -->
   <script id="projects-template" type="text/x-handlebars-template">
     <h4>{{projectName}}</h4>
     <ul>
       <li>{{projectDescription}}</li>
     </ul>
   </script>
-
-  <title>About Mike</title>
 </head>
 
 <body>
-
   <nav class="nav">
     <ul>
-    <li class="icon-menu" data-content="menu">
-      <a class="menu" href="#">menu</a>
-    </li>
-  </ul>
+      <li class="icon-menu" data-content="menu">
+        <a class="menu" href="#">menu</a>
+      </li>
+    </ul>
     <ol>
       <li class="tab" data-content="home">
         <a href="#home">home</a>
@@ -61,7 +58,7 @@
 
   <header id="home" class="home tab-content">
     <h1>What about Mike...</h1>
-    <img class="profile_pic" src="assets/images/mike-profile.png"/>
+    <img id="profile_pic" class="profile_pic" src="assets/images/mike-profile.png"/>
   </header>
 
   <section id="about" class="about tab-content">
@@ -76,6 +73,7 @@
     <h3>goals</h3>
     <ul class="goals"></ul>
   </section>
+
   <section id="life" class="life tab-content">
     <h3>life</h3>
     <h4>Places I've Visited</h4>
@@ -95,37 +93,77 @@
       <li>Zakynthos</li>
     </ol>
     <div>
-    <img id="vacation_pic" src="assets/images/bora-bora-1.jpg"/>
-    <img id="vacation_pic" src="assets/images/bora-bora-2.jpg"/>
-    <img id="vacation_pic" src="assets/images/france-1.jpg"/>
-    <img id="vacation_pic" src="assets/images/vacation.jpg"/>
-  </div>
+      <img id="vacation_pic" src="assets/images/bora-bora-1.jpg"/>
+      <img id="vacation_pic" src="assets/images/bora-bora-2.jpg"/>
+      <img id="vacation_pic" src="assets/images/france-1.jpg"/>
+      <img id="vacation_pic" src="assets/images/vacation.jpg"/>
+    </div>
   </section>
 
   <section id="projects" class="projects tab-content">
     <h3>code fellows projects</h3>
-
+    <div class="test"></div>
+    <!-- Begining of slideshow courtesy of Max Nguyen's Codepen-->
+    <div class="accordian">
+      <ul>
+        <li>
+          <div class="image_title">
+            <a href="#">Wedding 1</a>
+          </div>
+          <a href="#">
+            <img src="assets/images/project-3-1.png">
+          </a>
+        </li>
+        <li>
+          <div class="image_title">
+            <a href="#">Wedding 2</a>
+          </div>
+          <a href="#">
+            <img src="assets/images/project-2-2.png">
+          </a>
+        </li>
+        <li>
+          <div class="image_title">
+            <a href="#">Wedding 4</a>
+          </div>
+          <a href="#">
+            <img src="assets/images/project-1-2.png">
+          </a>
+        </li>
+        <li>
+          <div class="image_title">
+            <a href="#">Wedding 5</a>
+          </div>
+          <a href="#">
+            <img src="assets/images/project-1-1.png">
+          </a>
+        </li>
+      </ul>
+    </div>
   </section>
+  <!-- End of slideshow -->
+</section>
 
-  <footer>
-    <ol id="social" class="social pull-left">
-      <!-- <li><a href="http://linkedin.michaleevans.com">LinkedIn</a></li> -->
-      <li>
-        <a href="https://twitter.com/michaleevans72" class="icon-twitter3">
-          Twitter</a>
-      </li>
-      <li>
-        <a href="https://github.com/mevans72" class="icon-github">
-          GitHub</a>
-      </li>
-    </ol>
-
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.4/handlebars.js"></script>
-
-    <script src="assets/scripts/about-me-data.js"></script>
-    <script src="assets/scripts/about-me.js"></script>
-    <script src="assets/scripts/about-me-view.js"></script>
-  </footer>
+<footer>
+  <ol id="social" class="social pull-left">
+    <!-- <li><a href="http://linkedin.michaleevans.com">LinkedIn</a></li> -->
+    <li>
+      <a href="https://twitter.com/michaleevans72" class="icon-twitter3">
+        Twitter</a>
+    </li>
+    <li>
+      <a href="https://github.com/mevans72" class="icon-github">
+        GitHub</a>
+    </li>
+  </ol>
+  <!-- External JS Files / Libraries -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.4/handlebars.js"></script>
+  <script src="http://code.jquery.com/jquery-1.9.0.js"></script>
+  <!-- Local JS Files -->
+  <script src="assets/scripts/about-me-data.js"></script>
+  <script src="assets/scripts/about-me.js"></script>
+  <script src="assets/scripts/about-me-view.js"></script>
+</footer>
 
 </body>
 </html>

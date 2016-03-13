@@ -1,0 +1,42 @@
+var experienceData = [
+  {
+    role: 'Security Engineering Manager, Pacific Northwest Region @',
+    role_url: 'http://www.checkpoint.com/',
+    company: 'Check Point Systems'
+  },
+  {
+    role: 'Regional Security Consulting Manager @',
+    role_url: 'http://www.cisco.com/go/security/',
+    company: 'Cisco Security Solutions'
+  },
+  {
+    role: 'Information Security Engineering @',
+    role_url: '',
+    company: 'Mike\'s Other Gigs'
+  },
+
+];
+
+var goalsData = [
+  {
+    goal: 'GOAL #1: Complete the Code Fellows 201 course and get up to speed with HTML, CSS, and JavaScript',
+  },
+  {
+    goal: 'GOAL #2: Complete the Code Fellows 301 course and master the Model View Controller (MVC) design architecture',
+  },
+  {
+    goal: 'GOAL #3: Complete the Code Fellows 401 Python track and become a Python guru with a passion for automation and orchastration through code and APIs',
+  },
+
+];
+
+var projectsData = [
+  {
+    projectName: 'Guess\'Me Game',
+    projectDescription: 'The \"Guess\'Me Game\" is a game designed on picking random pictures. Statistics for images displayed and clicked are gathered throughout the game and stored both in arrays as well as in the users local storage, allowing the user to resume the game should the browser become refreshed, closed, etc. At the end of the game these statistics gathered are then displayed graphically by leveraging the ChartJS library.',
+  },
+  {
+    projectName: 'The Pizza Shop',
+    projectDescription: 'The \"Pizza Shop\" web application is designed to display two seperate URLS, one designed to be public facing, and the second designed to be internal facing. The public facing site is designed to be a simple lading page. The internal facing site is designed to display statistical data that is calculated based on a feed of hourly pizza sold and delivered. Statistical data that is calculated via JS functions include items such as: Monthly, Weekly and Daily Total Sales and Delivery Figures, Daily Sales and Delivery Figures by Store, and Hourly Sales and Delivery Figures by Store.',
+  }
+];

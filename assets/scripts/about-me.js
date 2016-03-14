@@ -1,54 +1,37 @@
-var experienceArray = [];
-var goalsArray = [];
-var projectsArray = [];
+var Mike = {};
+Mike.all = [];
 
-//Experience Hanldebars Logic
-function Experience (opts) {
-  for (key in opts) this[key] = opts[key];
+Mike.loadAll = function(rawData) {
+//   rawData.sort(function(a,b) {
+//     return (new Date(b.publishedOn)) - (new Date(a.publishedOn));
+//   });
+
+  rawData.forEach(function(ele) {
+    Mike.all.push(new Mike(ele));
+  });
 };
 
-Experience.prototype.toHtml = function() {
-  var source = $('#experience-template').html();
-  var template = Handlebars.compile(source);
-  return template(this);
-};
+Mike.fetchAll = function() {
+  var storedEtag;
+  $.ajax({
+    type: 'HEAD',
+    url: 'portfolio/assets/scripts/about-me-data.js',
+    success: function(data, message, xhr) {
+      storedEtag = xhr.getResponseHeader('etag');
+      localStorage.setItem('etag', storedEtag);
+      if (storedEtag === localStorage.etag && localStorage.rawData) {
+        Mike.loadAll(localStorage.rawData);
+        // articleView.initIndexPage();
+      } else {
+        $.getJSON('portfolio/assets/scripts/about-me-data.js', function(rawData) {
+          console.log(rawData);
+          Mike.loadAll(rawData);
+          localStorage.setItem('rawData', JSON.stringify(rawData));
+          // articleView.initIndexPage();
+        });
+      }
+    }
+  });
 
-experienceData.forEach(function(obj) {
-  experienceArray.push(new Experience(obj));
-});
-
-experienceArray.forEach(function(obj){
-  $('.experiences').append(obj.toHtml());
-});
-
-//Goals Hanldebars Logic
-function Goals (opts) {
-  for (key in opts) this[key] = opts[key];
 };
-Goals.prototype.toHtml = function() {
-  var source = $('#goals-template').html();
-  var template = Handlebars.compile(source);
-  return template(this);
-};
-goalsData.forEach(function(obj) {
-  goalsArray.push(new Goals(obj));
-});
-goalsArray.forEach(function(obj){
-  $('.goals').append(obj.toHtml());
-});
-
-//Projects Hanldebars Logic
-function Projects (opts) {
-  for (key in opts) this[key] = opts[key];
-};
-Projects.prototype.toHtml = function() {
-  var source = $('#projects-template').html();
-  var template = Handlebars.compile(source);
-  return template(this);
-};
-projectsData.forEach(function(obj) {
-  projectsArray.push(new Projects(obj));
-});
-projectsArray.forEach(function(obj){
-  $('.test').append(obj.toHtml());
-});
+Mike.fetchAll();

@@ -47,6 +47,7 @@ body > nav > ul > li > a:hover, body > nav > ul > li > a:focus, body > nav > ul 
      top: 1em;
      margin-left: 0;
      padding-left: 0;
+     visibility: visible;
    }
    nav li {
      display: inline;

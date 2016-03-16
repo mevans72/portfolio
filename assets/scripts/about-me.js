@@ -53,3 +53,13 @@ Mike.fetchAll = function() {
 };
 //Run fetchAll
 Mike.fetchAll();
+
+Mike.numWordsAll = function() {
+  return Mike.all.map(function(project) {
+    return project.projectDescription.match(/\b\w+/g).length;
+  })
+    // return article.body; // Grab the words from the `article` `body`.
+    .reduce(function(acc, cur) {
+      return acc + cur; // Sum up all the values!
+    });
+};

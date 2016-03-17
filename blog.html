@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html>
+<html lang="en">
+
+  <head>
+    <title>Mike's Blog</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- External / Vendor CSS Files -->
+    <link rel="stylesheet" href="assets/vendor/styles/normalize.css">
+    <link href="http://s3.amazonaws.com/codecademy-content/courses/ltp/css/shift.css" rel="stylesheet">
+    <link rel="stylesheet" href="http://s3.amazonaws.com/codecademy-content/courses/ltp/css/bootstrap.css">
+    <!-- Local CSS Files -->
+    <link type="text/css" rel="stylesheet" href="assets/styles/base.css"/>
+    <link type="text/css" rel="stylesheet" href="assets/styles/layout.css"/>
+    <link type="text/css" rel="stylesheet" href="assets/styles/module.css"/>
+    <link type="text/css" rel="stylesheet" href="assets/styles/state.css"/>
+    <link type="text/css" rel="stylesheet" href="assets/styles/icons.css"/>
+    <!-- Handlebar Template #1 -->
+
+    <script id="article-template" type="text/x-handlebars-template">
+      <article class="clearfix" data-author="{{author}}" data-category="{{category}}">
+        <header>
+          <h1>{{title}}</h1>
+          <div class="byline">
+            By <address><a href="{{authorUrl}}">{{author}}</a></address>
+            {{publishStatus}}
+          </div>
+        </header>
+        <section class="article-body">{{{body}}}</section>
+        <a href="#" class="read-on">Read on &rarr;</a>
+      </article>
+    </script>
+</head>
+
+<body>
+  <nav class="nav">
+    <ul>
+      <li class="icon-menu" data-content="menu">
+        <a class="menu" href="#">menu</a>
+      </li>
+    </ul>
+    <ol>
+      <li class="tab" data-content="home">
+        <a href="#home">home</a>
+      </li>
+      <li class="tab" data-content="about">
+        <a href="#about">about</a>
+      </li>
+      <li class="tab" data-content="life">
+        <a href="#life">life</a>
+      </li>
+      <li class="tab" data-content="projects">
+        <a href="#projects">projects</a>
+      </li>
+      <li class="tab" data-content="blog">
+        <a href="blog.html">blog</a>
+      </li>
+    </ol>
+  </nav>
+
+<section>
+  <h3>Welcome to "The Blog"</h3>
+</section>
+
+<!-- <section id="articles" class="articles tab-content"> -->
+<section>
+    <div>
+      <ul id="filters">
+        <li>
+          <select id="author-filter">
+            <option value="">-- Filter by Authors --</option>
+          </select>
+        </li>
+        <li>
+          <select id="category-filter">
+            <option value="">-- Filter by Categories --</option>
+          </select>
+        </li>
+      </ul>
+    </div>
+</section>
+
+
+<footer>
+  <ol id="social" class="social pull-left">
+    <!-- <li><a href="http://linkedin.michaleevans.com">LinkedIn</a></li> -->
+    <li>
+      <a href="https://twitter.com/michaleevans72" class="icon-twitter3">
+        Twitter</a>
+    </li>
+    <li>
+      <a href="https://github.com/mevans72" class="icon-github">
+        GitHub</a>
+    </li>
+  </ol>
+  <!-- External JS Files / Libraries -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.4/handlebars.js"></script>
+  <!-- <script src="http://code.jquery.com/jquery-1.9.0.js"></script> -->
+  <script src="https://code.jquery.com/jquery-1.12.1.min.js"></script>
+  <script src="https://code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
+  <!-- Local JS Files -->
+  <script src="assets/scripts/about-me-data.js"></script>
+  <script src="assets/scripts/about-me-handlebars.js"></script>
+  <script src="assets/scripts/about-me-view.js"></script>
+
+  <script src="assets/vendor/scripts/jquery-2.1.4.js"></script>
+  <script src="assets/vendor/scripts/handlebars.js"></script>
+  <script src="assets/vendor/scripts/marked.js"></script>
+  <script src="assets/vendor/scripts/html5sql.js"></script>
+  <script src="assets/vendor/scripts/webdb.js"></script>
+  <!-- Include the script files we need, that give us an API to the WebSQL feature of Chrome: -->
+  <script src="assets/vendor/scripts/article.js"></script>
+  <script src="assets/vendor/scripts/articleView.js"></script>
+</footer>
+
+<script>
+  // DONE: Ensure that a database table for articles exists, every time we load the page.
+  Article.createTable();
+  Article.fetchAll(articleView.initIndexPage);
+</script>
+
+
+</body>
+</html>
+
+
+
+
+    <!-- <footer>
+      &copy; 2015 Code Fellows | Static Blog | Happy Ipsum!
+    </footer> -->

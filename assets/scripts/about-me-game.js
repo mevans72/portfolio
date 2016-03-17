@@ -2,14 +2,11 @@
 
 //Introductions
 var userName = prompt('What is your name?');
-console.log('The user said their name is: ' + userName);
+// console.log('The user said their name is: ' + userName);
 var correctAnswers = 0;
-
 alert('Hi there ' + userName + ', I\'m going to ask you some questions about myself. Please answer Y or N');
-
 //Questions
 var pTagOne = document.getElementById('ans-one');
-
 function question1 (){
   var answer1 = prompt('Does \"Mike\" have a background in information security?').toLowerCase();
   if(answer1 === 'y' || answer1 === 'yes') {
@@ -22,13 +19,11 @@ function question1 (){
   } else {
     alert('You should have given a Y or N answer, so you lose this round.');
   }
-  console.log('Users response to QUESTION ONE is: ' + answer1);
-  console.log('User has answered ' + correctAnswers+ ' question correctly.');
+  // console.log('Users response to QUESTION ONE is: ' + answer1);
+  // console.log('User has answered ' + correctAnswers+ ' question correctly.');
 }
 question1();
-
 var pTagTwo = document.getElementById('ans-two');
-
 function question2 (){
   var answer2 = prompt('Does \"Mike\" have a background in software development?').toLowerCase();
   if(answer2 === 'n' || answer2 === 'no') {
@@ -41,13 +36,11 @@ function question2 (){
   } else {
     alert('You should have given a Y or N answer, so you lose this round.');
   }
-  console.log('Users response to QUESTION TWO is: ' + answer2);
-  console.log('User has answered ' + correctAnswers+ ' questions correctly.');
+  // console.log('Users response to QUESTION TWO is: ' + answer2);
+  // console.log('User has answered ' + correctAnswers+ ' questions correctly.');
 }
 question2();
-
 var pTagThree = document.getElementById('ans-three');
-
 function question3 (){
   var answer3 = prompt('Has \"Mike\" ever worked for Cisco systems?').toLowerCase();
   if(answer3 === 'y' || answer3 === 'yes') {
@@ -60,8 +53,8 @@ function question3 (){
   } else {
     alert('You should have given a Y or N answer, so you lose this round.');
   }
-  console.log('Users response to QUESTION THREE is: ' + answer3);
-  console.log('User has answered ' + correctAnswers+ ' questions correctly.');
+  // console.log('Users response to QUESTION THREE is: ' + answer3);
+  // console.log('User has answered ' + correctAnswers+ ' questions correctly.');
 }
 question3();
 

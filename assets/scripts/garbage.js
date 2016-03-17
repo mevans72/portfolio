@@ -72,9 +72,9 @@
 
   Mike.allProjects = function() {
     return Mike.all.map(function(projectName) {
-      console.log(projectName);
+      console.log('The project name is: ' + projectName);
         // console.log(projectDescription);
-      return projectName;
+      return Mike.projectName;
     }) // Don't forget to read the docs on map and reduce! You can reference the previous
       .reduce(function(acc, cur) {
         if (acc.indexOf(cur) < 0) acc.push(cur);
@@ -95,7 +95,7 @@
           return words.projectName === projectName;
         })
           .map(function() {
-            return words.match(/\b\w+/g).length;
+            return Mike.projectDescription.match(/\b\w+/g).length;
           })
           .reduce(function(acc, cur) {
             return acc + cur;

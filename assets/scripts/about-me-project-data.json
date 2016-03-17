@@ -1,7 +1,7 @@
 [
   {
-    "projectName": "Guess\'Me Game",
-    "projectDescription": "The \"Guess\'Me Game\" is a game designed on picking random pictures. Statistics for images displayed and clicked are gathered throughout the game and stored both in arrays as well as in the users local storage, allowing the user to resume the game should the browser become refreshed, closed, etc. At the end of the game these statistics gathered are then displayed graphically by leveraging the ChartJS library.",
+    "projectName": "The \"Guess Me\" Game",
+    "projectDescription": "The \"Guess Me Game\" is a game designed on picking random pictures. Statistics for images displayed and clicked are gathered throughout the game and stored both in arrays as well as in the users local storage, allowing the user to resume the game should the browser become refreshed, closed, etc. At the end of the game these statistics gathered are then displayed graphically by leveraging the ChartJS library.",
   },
   {
     "projectName": "The Pizza Shop",

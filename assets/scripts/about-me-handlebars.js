@@ -6,16 +6,33 @@
 
   //REVIEW: It may be best to add combine these three seperate Handlebars activities (i.e., the functions below for Experience, Goals, and Projects) in some manner.
 
+// 1 - Have a single constructor function, Mike, that acts as a template...?
+// 2 -
+
+  // function Mike (opts) {
+  //   // console.log('Mike opts is: ' + opts);
+  //   $.getJSON('about-me-data.json').forEach(function(obj) {
+  //     this.push(new Mike(obj));
+  //   });
+  // };
+
+  function MikeData (opts) {
+    for (key in opts) this[key] = opts[key];
+  };
+
+
   //Experience Hanldebars Logic
   function Experience (opts) {
+    // console.log(opts);
     for (key in opts) this[key] = opts[key];
   };
   Experience.prototype.toHtml = function() {
-    var source = $('#experience-template').html();
-    var template = Handlebars.compile(source);
+    // console.log(this);
+    var template = Handlebars.compile($('#experience-template').html());
     return template(this);
   };
-  experienceData.forEach(function(obj) {
+  mikeData.experienceData.forEach(function(obj) {
+    // console.log(obj);
     experienceArray.push(new Experience(obj));
   });
   experienceArray.forEach(function(obj){
@@ -27,11 +44,10 @@
     for (key in opts) this[key] = opts[key];
   };
   Goals.prototype.toHtml = function() {
-    var source = $('#goals-template').html();
-    var template = Handlebars.compile(source);
+    var template = Handlebars.compile($('#goals-template').html());
     return template(this);
   };
-  goalsData.forEach(function(obj) {
+  mikeData.goalsData.forEach(function(obj) {
     goalsArray.push(new Goals(obj));
   });
   goalsArray.forEach(function(obj){
@@ -43,11 +59,10 @@
     for (key in opts) this[key] = opts[key];
   };
   Projects.prototype.toHtml = function() {
-    var source = $('#projects-template').html();
-    var template = Handlebars.compile(source);
+    var template = Handlebars.compile($('#projects-template').html());
     return template(this);
   };
-  projectsData.forEach(function(obj) {
+  mikeData.projectsData.forEach(function(obj) {
     projectsArray.push(new Projects(obj));
   });
   projectsArray.forEach(function(obj){

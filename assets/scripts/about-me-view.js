@@ -8,8 +8,7 @@
       $('#' + $(this).data('content')).css({ 'margin-top': '0em' });
 
     });
-    //REVIEW: This method seems good and pretty self explanatory. I suggest removing comments where unneeded.
-    $('.nav .tab:first').click();// Let's now trigger a click on the first .tab element, to set up the page.
+    $('.nav .tab:first').click();
   };
 
   mikeView.navDisplayAllHandler = function() {

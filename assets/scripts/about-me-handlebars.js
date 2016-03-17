@@ -20,9 +20,12 @@
     });
   }
 
-  insertTemplates(mikeData.experienceData, '#experience-template', '.experiences');
-  insertTemplates(mikeData.goalsData, '#goals-template', '.goals');
-  insertTemplates(mikeData.projectsData, '#projects-template', '.projects');
+  $.getJSON('/assets/scripts/about-me-data.json', function(data) {
+    insertTemplates(data.experienceData, '#experience-template', '.experiences');
+    insertTemplates(data.goalsData, '#goals-template', '.goals');
+    insertTemplates(data.projectsData, '#projects-template', '.projects');
+  });
+
 
   // module.MikeData = MikeData;
 })(window);

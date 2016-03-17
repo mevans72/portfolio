@@ -7,8 +7,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- External / Vendor CSS Files -->
-    <!-- REVIEW: It looks like there is a mixture of both leveraging a CDN and storing these CSS files locally. With pros and cons for both, have you considered levarging one method explicitly? -->
-    <link rel="stylesheet" href="assets/vendor/styles/normalize.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/3.0.3/normalize.min.css">
     <link href="http://s3.amazonaws.com/codecademy-content/courses/ltp/css/shift.css" rel="stylesheet">
     <link rel="stylesheet" href="http://s3.amazonaws.com/codecademy-content/courses/ltp/css/bootstrap.css">
     <!-- Local CSS Files -->
@@ -42,22 +41,17 @@
       </li>
     </ul>
     <ol>
-      <!-- REVIEW: The links in the nav section of the blog page appear to have been copied from the index.html page. A suggestion would be to update these to point to the desired sections of the perspective page.
-
-      Example:   <a href="about">about</a> could be changed to
-                <a href="index.html#about"
-    -->
       <li class="tab" data-content="home">
-        <a href="home">home</a>
+        <a href="index.html#home">home</a>
       </li>
       <li class="tab" data-content="about">
-        <a href="#about">about</a>
+        <a href="index.html#about">about</a>
       </li>
       <li class="tab" data-content="life">
-        <a href="#life">life</a>
+        <a href="index.html#life">life</a>
       </li>
       <li class="tab" data-content="projects">
-        <a href="#projects">projects</a>
+        <a href="index.html#projects">projects</a>
       </li>
       <li class="tab" data-content="blog">
         <a href="blog.html">blog</a>
@@ -101,41 +95,23 @@
     </li>
   </ol>
   <!-- External JS Files / Libraries -->
-  <!-- REVIEW: It looks like there is a mixture of both leveraging a CDN and storing these scripts locally. With pros and cons for both, have you considered levarging one method explicitly? -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.4/handlebars.js"></script>
-  <!-- <script src="http://code.jquery.com/jquery-1.9.0.js"></script> -->
-  <script src="https://code.jquery.com/jquery-1.12.1.min.js"></script>
-  <script src="https://code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.5/handlebars.min.js"></script>
+  <script src="https://code.jquery.com/jquery-2.2.2.min.js"></script>
+  <script src="https://code.jquery.com/ui/1.11.4/jquery-ui.min.js"></script>
   <!-- Local JS Files -->
-  <script src="assets/scripts/about-me-data.js"></script>
-  <script src="assets/scripts/about-me-handlebars.js"></script>
-  <script src="assets/scripts/about-me-view.js"></script>
-
-  <script src="assets/vendor/scripts/jquery-2.1.4.js"></script>
-  <script src="assets/vendor/scripts/handlebars.js"></script>
   <script src="assets/vendor/scripts/marked.js"></script>
   <script src="assets/vendor/scripts/html5sql.js"></script>
   <script src="assets/vendor/scripts/webdb.js"></script>
-  <!-- Include the script files we need, that give us an API to the WebSQL feature of Chrome: -->
+  <script>
+  // DONE: Ensure that a database table for articles exists, every time we load the page.
+  Article.createTable();
+  Article.fetchAll(articleView.initIndexPage);
+  </script>
+
+  <script src="assets/scripts/about-me-view.js"></script>
   <script src="assets/vendor/scripts/article.js"></script>
   <script src="assets/vendor/scripts/articleView.js"></script>
 </footer>
 
-<!-- REVIEW: This looks to be leftover code used for testing. If it is unused, it may be best to delete. If not, it should probably be best to move this somewhere into or above the footer.  -->
-
-<script>
-  // DONE: Ensure that a database table for articles exists, every time we load the page.
-  Article.createTable();
-  Article.fetchAll(articleView.initIndexPage);
-</script>
-
-
 </body>
 </html>
-
-
-<!-- REVIEW: This looks to be leftover code. If it is unused, it may be best to delete.  -->
-
-    <!-- <footer>
-      &copy; 2015 Code Fellows | Static Blog | Happy Ipsum!
-    </footer> -->

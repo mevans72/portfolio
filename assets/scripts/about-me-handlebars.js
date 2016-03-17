@@ -1,7 +1,10 @@
 (function(module) {
+  //REVIEW: It may be best to add combine these three seperate arrays in some manner.
   var experienceArray = [];
   var goalsArray = [];
   var projectsArray = [];
+
+  //REVIEW: It may be best to add combine these three seperate Handlebars activities (i.e., the functions below for Experience, Goals, and Projects) in some manner.
 
   //Experience Hanldebars Logic
   function Experience (opts) {
@@ -50,6 +53,8 @@
   projectsArray.forEach(function(obj){
     $('.test').append(obj.toHtml());
   });
+
+  //REVIEW: It may be best to add combine these three seperate Handlebars activities (i.e., the exposing Experience, Goals, and Projects below to the module) in some manner.
 
   module.Experience = Experience;
   module.Goals = Goals;

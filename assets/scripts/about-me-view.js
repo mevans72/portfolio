@@ -8,7 +8,8 @@
       $('#' + $(this).data('content')).css({ 'margin-top': '0em' });
 
     });
-    $('.nav .tab:first').click(); // Let's now trigger a click on the first .tab element, to set up the page.
+    //REVIEW: This method seems good and pretty self explanatory. I suggest removing comments where unneeded.
+    $('.nav .tab:first').click();// Let's now trigger a click on the first .tab element, to set up the page.
   };
 
   mikeView.navDisplayAllHandler = function() {
@@ -16,6 +17,8 @@
       $('*').show();
     });
   };
+
+//REVIEW: If the code below is unused, I suggest removing the commented code to keep things a little cleaner.
 
   // //Begin test code
   // mikeView.navMobileMenuHoverHandler = function() {
@@ -63,6 +66,7 @@
   $(document).ready(function() {
     mikeView.navExperienceHandler();
     mikeView.navDisplayAllHandler();
+    //REVIEW: If these functions are unused, I suggest removing the commented code to keep things a little cleaner.
     // mikeView.navMobileMenuHoverHandler();
     // mikeView.navDesktopMenuHoverHandler();
   });

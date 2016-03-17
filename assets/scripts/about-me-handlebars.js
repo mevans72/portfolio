@@ -16,8 +16,26 @@
   //   });
   // };
 
-  function MikeData (opts) {
+  function MikeData (opts, templateId, data) {
     for (key in opts) this[key] = opts[key];
+    this.templateId = templateId;
+
+  };
+
+  function insertTemplates(data, constructor, templateLocation) {
+    var array = [];
+    data.forEach(function(obj) {
+      // console.log(obj);
+      array.push(new constructor(obj));
+    });
+    array.forEach(function(obj){
+      $(templateLocation).append(obj.toHtml());
+    });
+  }
+
+  MikeData.prototype.toHtml = function() {
+    var template = Handlebars.compile($(this.templateId).html());
+    return template(this);
   };
 
 

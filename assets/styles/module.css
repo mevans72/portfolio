@@ -60,3 +60,10 @@ p, ol, .goals li, .experiences li, h4 {
 ol, .projects li {
   list-style-type: none;
 }
+/*TEMP for Blog Article Testing*/
+.byline, .read-on {
+  margin-left: 2em;
+}
+.articles li {
+  list-style: none;
+}

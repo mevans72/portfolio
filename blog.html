@@ -17,7 +17,6 @@
   <link type="text/css" rel="stylesheet" href="assets/styles/state.css" />
   <link type="text/css" rel="stylesheet" href="assets/styles/icons.css" />
   <!-- Handlebar Template #1 -->
-
   <script id="article-template" type="text/x-handlebars-template">
     <article class="clearfix" data-author="{{author}}" data-category="{{category}}">
       <header>
@@ -57,29 +56,31 @@
       </li>
     </ol>
   </nav>
+  <main>
+    <section>
+      <h3>Welcome to "The Blog"</h3>
+    </section>
 
-  <section>
-    <h3>Welcome to "The Blog"</h3>
-  </section>
+    <!-- </section>
 
-  <section>
-    <div>
-      <ul id="filters">
-        <li>
-          <select id="author-filter">
-            <option value="">-- Filter by Authors --</option>
-          </select>
-        </li>
-        <li>
-          <select id="category-filter">
-            <option value="">-- Filter by Categories --</option>
-          </select>
-        </li>
-      </ul>
-      <section id="articles" class="articles tab-content">
-      </section>
-    </div>
-  </section>
+    <section> -->
+    <section id="articles" class="articles tab-content">
+      <div>
+        <ul id="filters">
+          <li>
+            <select id="author-filter">
+              <option value="">-- Filter by Authors --</option>
+            </select>
+          </li>
+          <li>
+            <select id="category-filter">
+              <option value="">-- Filter by Categories --</option>
+            </select>
+          </li>
+        </ul>
+      </div>
+    </section>
+  </main>
 
   <footer>
     <ol id="social" class="social pull-left">
@@ -102,7 +103,7 @@
     <script src="assets/vendor/scripts/html5sql.js"></script>
     <script src="assets/vendor/scripts/webdb.js"></script>
 
-    <script src="assets/scripts/about-me-view.js"></script>
+    <!-- <script src="assets/scripts/about-me-view.js"></script> -->
 
     <script src="assets/vendor/scripts/code-301/article.js"></script>
     <script src="assets/vendor/scripts/code-301/articleView.js"></script>

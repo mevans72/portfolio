@@ -22,7 +22,7 @@
   // Set up a DB table for articles.
   Article.createTable = function(callback) {
     webDB.execute(
-      'CREATE TABLE articles(Id INTEGER PRIMARY KEY, title VARCHAR(30), category VARCHAR(30), author VARCHAR(30), authorUrl TEXT, publishedOn DATETIME, body TEXT)', // what SQL command do we run here inside these quotes?
+      'CREATE TABLE IF NOT EXISTS articles(Id INTEGER PRIMARY KEY, title VARCHAR(30), category VARCHAR(30), author VARCHAR(30), authorUrl TEXT, publishedOn DATETIME, body TEXT)', // what SQL command do we run here inside these quotes?
       function(result) {
         console.log('Successfully set up the articles table.', result);
         if (callback) callback();

@@ -2,31 +2,32 @@
 <html>
 <html lang="en">
 
-  <head>
-    <title>About Mike</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <!-- External / Vendor CSS Files -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/3.0.3/normalize.min.css">
-    <link href="http://s3.amazonaws.com/codecademy-content/courses/ltp/css/shift.css" rel="stylesheet">
-    <link rel="stylesheet" href="http://s3.amazonaws.com/codecademy-content/courses/ltp/css/bootstrap.css">
-    <link type="text/css" rel="stylesheet" href="assets/vendor/styles/project-slide-show.css"/>
-    <!-- Local CSS Files -->
-    <link type="text/css" rel="stylesheet" href="assets/styles/base.css"/>
-    <link type="text/css" rel="stylesheet" href="assets/styles/layout.css"/>
-    <link type="text/css" rel="stylesheet" href="assets/styles/module.css"/>
-    <link type="text/css" rel="stylesheet" href="assets/styles/state.css"/>
-    <link type="text/css" rel="stylesheet" href="assets/styles/icons.css"/>
-    <!-- Handlebar Template #1 -->
-    <script id="experience-template" type="text/x-handlebars-template">
+<head>
+  <title>About Mike</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- External / Vendor CSS Files -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/3.0.3/normalize.min.css">
+  <link href="http://s3.amazonaws.com/codecademy-content/courses/ltp/css/shift.css" rel="stylesheet">
+  <link rel="stylesheet" href="http://s3.amazonaws.com/codecademy-content/courses/ltp/css/bootstrap.css">
+  <link type="text/css" rel="stylesheet" href="assets/vendor/styles/project-slide-show.css" />
+  <!-- Local CSS Files -->
+  <link type="text/css" rel="stylesheet" href="assets/styles/base.css" />
+  <link type="text/css" rel="stylesheet" href="assets/styles/layout.css" />
+  <link type="text/css" rel="stylesheet" href="assets/styles/module.css" />
+  <link type="text/css" rel="stylesheet" href="assets/styles/state.css" />
+  <link type="text/css" rel="stylesheet" href="assets/styles/icons.css" />
+  <!-- Experience - Handlebar Template #1 -->
+  <script id="experience-template" type="text/x-handlebars-template">
     <li>{{role}}
       <a href="{{experience_url}}" title="{{company}}">{{company}}</a>
     </li>
   </script>
-  <!-- Handlebar Template #2 -->
+  <!-- Goals - Handlebar Template #2 -->
   <script id="goals-template" type="text/x-handlebars-template">
     <li>{{goal}}</li>
   </script>
-  <!-- Handlebar Template #3 -->
+  <!-- Projects - Handlebar Template #3 -->
   <script id="projects-template" type="text/x-handlebars-template">
     <h4>{{projectName}}</h4>
     <ul>
@@ -55,15 +56,15 @@
       <li class="tab" data-content="projects">
         <a href="#projects">projects</a>
       </li>
-      <li class="tab" data-content="blog">
-        <a href="blog.html">blog</a>
+      <!-- <li class="tab" data-content="blog">
+        <a href="blog.html">blog</a> -->
       </li>
     </ol>
   </nav>
 
   <header id="home" class="home tab-content">
     <h1>What about Mike...</h1>
-    <img id="profile_pic" class="profile_pic" src="assets/images/mike-profile.png"/>
+    <img id="profile_pic" class="profile_pic" src="assets/images/mike-profile.png" />
   </header>
 
   <section id="about" class="about tab-content">
@@ -98,78 +99,56 @@
       <li>Zakynthos</li>
     </ol>
     <div>
-      <img id="vacation_pic" src="assets/images/bora-bora-1.jpg"/>
-      <img id="vacation_pic" src="assets/images/bora-bora-2.jpg"/>
-      <img id="vacation_pic" src="assets/images/france-1.jpg"/>
-      <img id="vacation_pic" src="assets/images/vacation.jpg"/>
+      <img id="vacation_pic" src="assets/images/bora-bora-1.jpg" />
+      <img id="vacation_pic" src="assets/images/bora-bora-2.jpg" />
+      <img id="vacation_pic" src="assets/images/france-1.jpg" />
+      <img id="vacation_pic" src="assets/images/vacation.jpg" />
     </div>
   </section>
 
   <section id="projects" class="projects tab-content">
     <h3>code fellows projects</h3>
-    <div class="test"></div>
     <!-- Begining of slideshow courtesy of Max Nguyen's Codepen-->
     <div class="accordian">
       <ul>
         <li>
-          <div class="image_title">
-            <a href="#">Wedding 1</a>
-          </div>
-          <a href="#">
             <img src="assets/images/project-3-1.png">
-          </a>
         </li>
         <li>
-          <div class="image_title">
-            <a href="#">Wedding 2</a>
-          </div>
-          <a href="#">
             <img src="assets/images/project-2-2.png">
-          </a>
         </li>
         <li>
-          <div class="image_title">
-            <a href="#">Wedding 4</a>
-          </div>
-          <a href="#">
             <img src="assets/images/project-1-2.png">
-          </a>
         </li>
         <li>
-          <div class="image_title">
-            <a href="#">Wedding 5</a>
-          </div>
-          <a href="#">
             <img src="assets/images/project-1-1.png">
-          </a>
         </li>
       </ul>
     </div>
   </section>
   <!-- End of slideshow -->
-</section>
 
-<footer>
-  <ol id="social" class="social pull-left">
-    <!-- <li><a href="http://linkedin.michaleevans.com">LinkedIn</a></li> -->
-    <li>
-      <a href="https://twitter.com/michaleevans72" class="icon-twitter3">
+  <footer>
+    <ol id="social" class="social pull-left">
+      <!-- <li><a href="http://linkedin.michaleevans.com">LinkedIn</a></li> -->
+      <li>
+        <a href="https://twitter.com/michaleevans72" class="icon-twitter3">
         Twitter</a>
-    </li>
-    <li>
-      <a href="https://github.com/mevans72" class="icon-github">
+      </li>
+      <li>
+        <a href="https://github.com/mevans72" class="icon-github">
         GitHub</a>
-    </li>
-  </ol>
-  <!-- External JS Files / Libraries -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.5/handlebars.min.js"></script>
-  <script src="https://code.jquery.com/jquery-2.2.2.min.js"></script>
-  <script src="https://code.jquery.com/ui/1.11.4/jquery-ui.min.js"></script>
-  <!-- Local JS Files -->
-  <script src="assets/scripts/about-me-data.js"></script>
-  <script src="assets/scripts/about-me-handlebars.js"></script>
-  <script src="assets/scripts/about-me-view.js"></script>
-</footer>
+      </li>
+    </ol>
+    <!-- External Scripts Files / Libraries -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.5/handlebars.min.js"></script>
+    <script src="https://code.jquery.com/jquery-2.2.2.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.11.4/jquery-ui.min.js"></script>
+    <!-- Local Scripts Files -->
+    <script src="assets/scripts/about-me.js"></script>
+    <script src="assets/scripts/about-me-view.js"></script>
+  </footer>
 
 </body>
+
 </html>

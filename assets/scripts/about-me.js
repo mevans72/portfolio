@@ -26,6 +26,4 @@
     insertTemplates(data.projectsData, '#projects-template', '.projects');
   });
 
-
-  // module.MikeData = MikeData;
 })(window);

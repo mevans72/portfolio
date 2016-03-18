@@ -9,10 +9,17 @@
     return template(this);
   };
 
+
+  //*************//
+  //right now your insertTemplates function is a private function that can't be used by other objects,
+  //if you want to exposure this function to other object, use MikeData.prototype.insertTemplates;
+  //*************//
   function insertTemplates(data, templateId, templateLocation) {
     var array = [];
     data.forEach(function(obj) {
       // console.log(obj);
+
+
       array.push(new MikeData(obj, templateId));
     });
     array.forEach(function(obj){

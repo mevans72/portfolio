@@ -1,6 +1,7 @@
 (function(module) {
   var mikeView = {};
 
+
   mikeView.navExperienceHandler = function() {
     $('.nav').on('click', '.tab', function() {
       $('.tab-content').hide();
@@ -16,6 +17,10 @@
       $('*').show();
     });
   };
+
+  ////******///
+  //try use media query for the responsive layout instead of in the jquery.
+  //************//
 
 //REVIEW: If the code below is unused, I suggest removing the commented code to keep things a little cleaner.
 
@@ -44,21 +49,21 @@
   //     });
   //   };
   // };
-  // if($(window).width() <= 480) {
-  //   $('nav').hover(function(){
-  //     $('nav ol').css('visibility', 'visible');
-  //     $('nav').css('height', '12em');
-  //   }, function(){
-  //     $('nav ol').css('visibility', 'hidden');
-  //     $('nav').css('height', '4em');
-  //   });
-  // };
-  // if($(window).width() >= 480) {
-  //   $('nav').hover(function(){
-  //     $('nav ol').css('visibility', 'visible');
-  //     $('nav').css('height', '4em');
-  //   });
-  // };
+  if($(window).width() <= 480) {
+    $('nav').hover(function(){
+      $('nav ol').css('display', 'block');
+      $('nav').css('height', '12em');
+    }, function(){
+      $('nav ol').css('display', 'none');
+      $('nav').css('height', '4em');
+    });
+  };
+  if($(window).width() >= 480) {
+    $('nav').hover(function(){
+      $('nav ol').css('display', 'block');
+      $('nav').css('height', '4em');
+    });
+  };
   // //End of test code
 
   // Calling js/jquery functions

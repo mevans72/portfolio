@@ -23,7 +23,8 @@ nav ol {
   left: 3.4em;
   margin-left: 0;
   padding-left: 0;
-  visibility: hidden;
+  /*use display: none instead of visibility: hidden;*/
+  display: none;
 }
 nav li {
   display: block;

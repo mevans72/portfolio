@@ -20,21 +20,21 @@
 //REVIEW: If the code below is unused, I suggest removing the commented code to keep things a little cleaner.
 
   // //Begin test code
-  // mikeView.navMobileMenuHoverHandler = function() {
-  //   if($(window).width() <= 480) {
-  //     $(document).on('mouseenter mouseleave', 'nav', function(){
-  //       $('nav ol').css('visibility', 'visible');
-  //       $('nav').css('height', '12em');
-  //       $('body').css('background-color', 'blue');
-  //     }, function(){
-  //       $(document).on('mouseleave', 'nav', function(){
-  //       // $('nav ol').css('visibility', 'hidden');
-  //         $('nav').css('height', '4em');
-  //         $('body').css('background-color', 'pink');//Seems to work...
-  //       });
-  //     });
-  //   }
-  // };
+  mikeView.navMobileMenuHoverHandler = function() {
+    if($(window).width() <= 480) {
+      $(document).on('mouseenter mouseleave', 'nav', function(){
+        $('nav ol').css('visibility', 'visible');
+        $('nav').css('height', '12em');
+        $('body').css('background-color', 'blue');
+      }, function(){
+        $(document).on('mouseleave', 'nav', function(){
+        // $('nav ol').css('visibility', 'hidden');
+          $('nav').css('height', '4em');
+          $('body').css('background-color', 'pink');//Seems to work...
+        });
+      });
+    }
+  };
   // mikeView.navDesktopMenuHoverHandler = function() {
   //   if($(window).width() >= 480) {
   //     $('nav').on('mouseenter', 'nav', function(){

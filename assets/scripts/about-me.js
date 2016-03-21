@@ -30,7 +30,7 @@
     var etag;
     $.ajax({
       type: 'HEAD',
-      url: 'assets/scripts/about-me-data.json',
+      url: 'assets/data/about-me-data.json',
       success: function(data, message, xhr) {
         etag = xhr.getResponseHeader('etag');
         if(localStorage.rawData && localStorage.etag === etag) {
@@ -40,7 +40,7 @@
           localStorage.etag = etag;
         }
         if (!localStorage.rawData || localStorage.etag !== etag) {
-          $.getJSON('assets/scripts/about-me-data.json', function(rawData) {
+          $.getJSON('assets/data/about-me-data.json', function(rawData) {
             localStorage.rawData = JSON.stringify(rawData);
             MikeData.loadAboutMeData();
           });

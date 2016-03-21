@@ -1,54 +1,36 @@
-var experienceArray = [];
-var goalsArray = [];
-var projectsArray = [];
+(function(module) {
+  function MikeData (opts, templateId) {
+    for (key in opts) this[key] = opts[key];
+    this.templateId = templateId;
+  };
 
-//Experience Hanldebars Logic
-function Experience (opts) {
-  for (key in opts) this[key] = opts[key];
-};
+  MikeData.prototype.toHtml = function() {
+    var template = Handlebars.compile($(this.templateId).html());
+    return template(this);
+  };
 
-Experience.prototype.toHtml = function() {
-  var source = $('#experience-template').html();
-  var template = Handlebars.compile(source);
-  return template(this);
-};
 
-experienceData.forEach(function(obj) {
-  experienceArray.push(new Experience(obj));
-});
+  //*************//
+  //right now your insertTemplates function is a private function that can't be used by other objects,
+  //if you want to exposure this function to other object, use MikeData.prototype.insertTemplates;
+  //*************//
+  function insertTemplates(data, templateId, templateLocation) {
+    var array = [];
+    data.forEach(function(obj) {
+      // console.log(obj);
 
-experienceArray.forEach(function(obj){
-  $('.experiences').append(obj.toHtml());
-});
 
-//Goals Hanldebars Logic
-function Goals (opts) {
-  for (key in opts) this[key] = opts[key];
-};
-Goals.prototype.toHtml = function() {
-  var source = $('#goals-template').html();
-  var template = Handlebars.compile(source);
-  return template(this);
-};
-goalsData.forEach(function(obj) {
-  goalsArray.push(new Goals(obj));
-});
-goalsArray.forEach(function(obj){
-  $('.goals').append(obj.toHtml());
-});
+      array.push(new MikeData(obj, templateId));
+    });
+    array.forEach(function(obj){
+      $(templateLocation).append(obj.toHtml());
+    });
+  }
 
-//Projects Hanldebars Logic
-function Projects (opts) {
-  for (key in opts) this[key] = opts[key];
-};
-Projects.prototype.toHtml = function() {
-  var source = $('#projects-template').html();
-  var template = Handlebars.compile(source);
-  return template(this);
-};
-projectsData.forEach(function(obj) {
-  projectsArray.push(new Projects(obj));
-});
-projectsArray.forEach(function(obj){
-  $('.test').append(obj.toHtml());
-});
+  $.getJSON('/assets/scripts/about-me-data.json', function(data) {
+    insertTemplates(data.experienceData, '#experience-template', '.experiences');
+    insertTemplates(data.goalsData, '#goals-template', '.goals');
+    insertTemplates(data.projectsData, '#projects-template', '.projects');
+  });
+
+})(window);

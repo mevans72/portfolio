@@ -1,4 +1,5 @@
 * {
+  /*outline:1px solid black;*/
   font-family: Frutiger, Avenir, Arial;
 }
 body {
@@ -8,7 +9,4 @@ body {
 }
 img not(.accordian img) {
   max-width: 100%;
-}
-header, section {
-  margin-top: 0 !important;
 }

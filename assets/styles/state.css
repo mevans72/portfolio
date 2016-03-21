@@ -35,8 +35,10 @@ body > nav > ul > li > a:hover, body > nav > ul > li > a:focus, body > nav > ul 
 }
 /*Media queries*/
 @media screen and (min-width: 480px) {
+  
+  /*use display: none instead of visibility: hidden;*/
    .icon-menu {
-     visibility: hidden;
+     display:none;
    }
    nav {
      height: 4em;
@@ -47,6 +49,8 @@ body > nav > ul > li > a:hover, body > nav > ul > li > a:focus, body > nav > ul 
      top: 1em;
      margin-left: 0;
      padding-left: 0;
+     /*use display: none instead of visibility: hidden;*/
+     display: none;
    }
    nav li {
      display: inline;

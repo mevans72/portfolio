@@ -1,5 +1,5 @@
 (function(module) {
-  function MikeData (opts, templateId) {
+  function MikeData(opts, templateId) {
     for (key in opts) this[key] = opts[key];
     this.templateId = templateId;
   };
@@ -9,21 +9,49 @@
     return template(this);
   };
 
-  function insertTemplates(data, templateId, templateLocation) {
+  MikeData.insertTemplates = function(data, templateId, templateLocation) {
     var array = [];
     data.forEach(function(obj) {
-      // console.log(obj);
       array.push(new MikeData(obj, templateId));
     });
-    array.forEach(function(obj){
+    array.forEach(function(obj) {
       $(templateLocation).append(obj.toHtml());
     });
-  }
+  };
 
-  $.getJSON('/assets/scripts/about-me-data.json', function(data) {
-    insertTemplates(data.experienceData, '#experience-template', '.experiences');
-    insertTemplates(data.goalsData, '#goals-template', '.goals');
-    insertTemplates(data.projectsData, '#projects-template', '.projects');
+  MikeData.loadAboutMeData = function() {
+    var rawData = JSON.parse(localStorage.rawData);
+    MikeData.insertTemplates(rawData.experienceData, '#experience-template', '.experiences');
+    MikeData.insertTemplates(rawData.goalsData, '#goals-template', '.goals');
+    MikeData.insertTemplates(rawData.projectsData, '#projects-template', '.projects');
+  };
+
+  MikeData.localData = function() {
+    var etag;
+    $.ajax({
+      type: 'HEAD',
+      url: 'assets/data/about-me-data.json',
+      success: function(data, message, xhr) {
+        etag = xhr.getResponseHeader('etag');
+        if(localStorage.rawData && localStorage.etag === etag) {
+          MikeData.loadAboutMeData();
+        }
+        if (!localStorage.etag || localStorage.etag !== etag) {
+          localStorage.etag = etag;
+        }
+        if (!localStorage.rawData || localStorage.etag !== etag) {
+          $.getJSON('assets/data/about-me-data.json', function(rawData) {
+            localStorage.rawData = JSON.stringify(rawData);
+            MikeData.loadAboutMeData();
+          });
+        }
+      }
+    });
+  };
+
+  $(document).ready(function() {
+    MikeData.localData();
   });
 
+  module.MikeData = MikeData;
 })(window);

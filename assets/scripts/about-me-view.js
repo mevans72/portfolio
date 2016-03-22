@@ -3,13 +3,7 @@
 
 
   mikeView.navExperienceHandler = function() {
-    $('.nav').on('click', '.tab', function() {
-      $('.tab-content').hide();
-      $('#' + $(this).data('content')).fadeIn();
-      $('#' + $(this).data('content')).css({ 'margin-top': '0em' });
-
-    });
-    $('.nav .tab:first').click();
+    $('.home').show();
   };
 
   mikeView.navDisplayAllHandler = function() {

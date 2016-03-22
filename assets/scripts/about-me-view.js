@@ -1,11 +1,6 @@
 (function(module) {
   var mikeView = {};
 
-
-  mikeView.navExperienceHandler = function() {
-    $('.home').show();
-  };
-
   mikeView.navDisplayAllHandler = function() {
     $('#profile_pic').on('dblclick', function() {
       $('*').show();
@@ -15,7 +10,6 @@
 
   // Calling js/jquery functions
   $(document).ready(function() {
-    mikeView.navExperienceHandler();
     mikeView.navDisplayAllHandler();
   });
 

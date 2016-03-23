@@ -33,6 +33,9 @@ body > nav > ul > li > a:hover, body > nav > ul > li > a:focus, body > nav > ul 
   height: 375px;
   width: 275px;
 }
+.tab-content {
+  display: none;
+}
 /*Media queries*/
 @media screen and (min-width: 480px) {
    .icon-menu {

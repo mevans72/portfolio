@@ -17,6 +17,11 @@
     $('.tab-content').hide();
     $('#projects').show();
   };
+  controller.githubProjects = function() {
+    $('.tab-content').hide();
+    $('#gh').show();
+    repos.requestRepos(repoView.index);
+  };
 
   module.controller = controller;
 })(window);

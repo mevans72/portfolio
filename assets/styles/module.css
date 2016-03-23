@@ -57,7 +57,7 @@ p, ol, .goals li, .experiences li, h4 {
 .about > p:nth-child(3){
   margin-top: .5em;
 }
-ol, .projects li {
+ol, .projects li, .github-projects li {
   list-style-type: none;
 }
 /*TEMP for Blog Article Testing*/

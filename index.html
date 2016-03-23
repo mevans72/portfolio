@@ -27,22 +27,34 @@
     <li>{{goal}}</li>
   </script>
   <!-- Projects - Handlebar Template #3 -->
-  <script id="projects-template" type="text/x-handlebars-template">
+  <!-- Temporarily commenting this out to see how I like the project look from class-12 assignment -->
+  <!-- <script id="projects-template" type="text/x-handlebars-template">
     <h4>{{projectName}}</h4>
     <ul>
       <li>{{projectDescription}}</li>
     </ul>
-  </script>
+  </script> -->
+  <!-- Projects - Handlebar Template #4 -->
+  <script id="repo-template" type="text/x-handlebars-template">
+  <li>
+    <a href="{{html_url}}" target="_blank"><h3>{{name}}</h3></a>
+    <p>Description: {{description}}</p>
+    <p>Language: {{language}}</p>
+    <p>Created: {{created_at}}</p>
+    <p>Last updated: {{updated_at}}</p>
+    {{#if watchers_count}}
+      <p>{{watchers_count}} watching this repo</p>
+    {{/if}}
+  </li>
+</script>
+
 </head>
 
 <body>
   <nav class="nav">
-    <!-- probably use a div instead of of ul>li because there is only one item in you list -->
-
       <div class="icon-menu" data-content="menu">
         <a class="menu" href="#">menu</a>
       </div>
-
 
     <ol>
       <li class="tab" data-content="home">
@@ -126,8 +138,14 @@
         </li>
       </ul>
     </div>
+    <h4><a href="/gh">Click here to check out my GitHub projects</a><h4>
+    <!-- End of slideshow -->
   </section>
-  <!-- End of slideshow -->
+  <section id="gh" class="github-projects tab-content">
+    <ul>
+      <li</li>
+    </ul>
+  </section>
 
   <footer>
     <ol id="social" class="social pull-left">
@@ -145,16 +163,16 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.5/handlebars.min.js"></script>
     <script src="https://code.jquery.com/jquery-2.2.2.min.js"></script>
     <script src="https://code.jquery.com/ui/1.11.4/jquery-ui.min.js"></script>
+    <script src="assets/vendor/scripts/page.js"></script>
     <!-- Local Scripts Files -->
     <script src="assets/scripts/about-me.js"></script>
     <script src="assets/scripts/about-me-view.js"></script>
-
+    <script src="assets/scripts/githubToken.js"></script>
+    <script src="assets/scripts/repo.js"></script>
+    <script src="assets/scripts/repoView.js"></script>
     <script src="assets/scripts/about-me-controller.js"></script>
-
-    <script src="assets/vendor/scripts/page.js"></script>
     <script src="assets/scripts/routes.js"></script>
-    <script src="server.js"></script>
-  </footer>
+</footer>
 
 </body>
 

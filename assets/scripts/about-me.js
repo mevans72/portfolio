@@ -23,7 +23,7 @@
     var rawData = JSON.parse(localStorage.rawData);
     MikeData.insertTemplates(rawData.experienceData, '#experience-template', '.experiences');
     MikeData.insertTemplates(rawData.goalsData, '#goals-template', '.goals');
-    MikeData.insertTemplates(rawData.projectsData, '#projects-template', '.projects');
+    // MikeData.insertTemplates(rawData.projectsData, '#projects-template', '.projects');
   };
 
   MikeData.localData = function() {

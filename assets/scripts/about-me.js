@@ -21,12 +21,14 @@
 
   MikeData.loadAboutMeData = function() {
     var rawData = JSON.parse(localStorage.rawData);
-    MikeData.insertTemplates(rawData.experienceData, '#experience-template', '.experiences');
-    MikeData.insertTemplates(rawData.goalsData, '#goals-template', '.goals');
-    // MikeData.insertTemplates(rawData.projectsData, '#projects-template', '.projects');
+    if ($('ul.experiences li').length < 3) {
+      MikeData.insertTemplates(rawData.experienceData, '#experience-template', '.experiences');
+      MikeData.insertTemplates(rawData.goalsData, '#goals-template', '.goals');
+      // MikeData.insertTemplates(rawData.projectsData, '#projects-template', '.projects');
+    }
   };
 
-  MikeData.localData = function() {
+  MikeData.localData = function(context, next) {
     var etag;
     $.ajax({
       type: 'HEAD',
@@ -45,13 +47,10 @@
             MikeData.loadAboutMeData();
           });
         }
+        next();
       }
     });
   };
-
-  $(document).ready(function() {
-    MikeData.localData();
-  });
 
   module.MikeData = MikeData;
 })(window);

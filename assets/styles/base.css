@@ -13,10 +13,13 @@ body {
 img not(.accordian img) {
   max-width: 100%;
 }
-a {
+a, h4 {
     color: #428bca;
     text-decoration: none;
     background: 0 0;
+}
+h1, h3 {
+  color: #2A6496
 }
 .pull-left {
     float: left!important;

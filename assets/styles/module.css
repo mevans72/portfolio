@@ -45,12 +45,13 @@ h1, h2, h3 {
   text-transform: uppercase;
 }
 h4 {
-  margin-bottom: .5em;
+  color: #428bca;
+  margin: 0em 0em 0em 2em;
 }
 li {
   color: #000000;
 }
-p, ol, .goals li, .experiences li, h4 {
+p, ol, .goals li, .experiences li {
   color: #000000;
   margin: 0em 0em 0em 2em;
 }
